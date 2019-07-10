@@ -44,13 +44,14 @@
       
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <div class="site-logo mr-auto w-25"><a href="index.html">MoParcel</a></div>
+          <div class="site-logo mr-auto w-25"><a href="/">MoParcel</a></div>
 
           <div class="mx-auto text-center">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#packages-section" class="nav-link">Packages</a></li>
+                <li><a href="#deliveries_section" class="nav-link">Deliveries</a></li>
+                <li><a href="/riders" class="nav-link">Riders</a></li>
               </ul>
             </nav>
           </div>
@@ -76,8 +77,8 @@
             <div class="col-12">
               <div class="row align-items-center">
                 <div class="col-lg-6 mb-4">
-                  <h1  data-aos="fade-up" data-aos-delay="100">Get packages across the country & the world </h1>
-                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">In an instant</p>
+                  <h1  data-aos="fade-up" data-aos-delay="100">Get packages delivered instantly </h1>
+                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">You can time us. Periodt.</p>
 
                 </div>
 
@@ -117,11 +118,11 @@
     </div>
 
     
-    <div class="site-section courses-title" id="packages-section">
+    <div class="site-section courses-title" id="deliveries_section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
-            <h2 class="section-title">Packages</h2>
+            <h2 class="section-title">Deliveries</h2>
           </div>
         </div>
       </div>
@@ -330,8 +331,9 @@
           <div class="col-md-3 ml-auto">
             <h3>Links</h3>
             <ul class="list-unstyled footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/">Packages</a></li>
+              <li><a href="/#home-section">Home</a></li>
+              <li><a href="/#deliveries_section">Deliveries</a></li>
+              <li><a href="/riders">Riders</a></li>
             </ul>
           </div>
 

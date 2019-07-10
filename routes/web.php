@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::post('/register-new', 'UsersController@registerNew');
 
 Route::post('/messages-new', 'MessagesController@messageNew');
+
+Route::get('/riders', 'RidersController@home');
+
+Route::post('/register-new-rider', 'RidersController@newRider');
+
+Route::post('/riders-check-rider', 'RidersController@checkRider');
