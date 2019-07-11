@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MoParcel | Riders Home</title>
+    <title>MoParcel | Riders</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -44,7 +44,7 @@
       
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <div class="site-logo mr-auto w-25"><a href="/">MoParcel | Riders Home</a></div>
+          <div class="site-logo mr-auto w-25"><a href="/">MoParcel | Riders</a></div>
 
           <div class="mx-auto text-center">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -76,40 +76,39 @@
           <div class="row align-items-center">
             <div class="col-12">
               <div class="row align-items-center">
-                <div class="col-lg-12 ml-auto" data-aos="fade-up" data-aos-delay="500">
-                  <form action="/edit-rider" method="post" class="form-box">
+                <div class="col-lg-7 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  <form action="/register-new-rider" method="post" class="form-box">
                     {{ csrf_field() }}
-                    <h3 class="h4 text-black mb-4">Edit Riders Profile</h3>
+                    <h3 class="h4 text-black mb-4">Sign Up For Riders</h3>
                     <div class="form-group">
-                      <input type="text" class="form-control" name="firstname" value="{{ $rider->firstname }}" readonly>
+                      <input type="text" class="form-control" name="firstname" placeholder="Firstname" required>
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" name="lastname" value="{{ $rider->lastname }}" readonly>
+                      <input type="text" class="form-control" name="lastname" placeholder="Lastname" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="phone_number" value="{{ $rider->phone_number }}" >
+                        <input type="text" class="form-control" name="phone_number" placeholder="Phone number" required>
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" name="password" placeholder="Type new password to change it" >
+                      <input type="password" class="form-control" name="password" placeholder="Password" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="id_number" value="{{ $rider->id_number }}" readonly>
+                        <input type="text" class="form-control" name="id_number" placeholder="National ID Number" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="vehicle_reg" value="{{ $rider->vehicle_reg }}" >
+                        <input type="text" class="form-control" name="vehicle_reg" placeholder="Vehicle Reg. No" required>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" name="vehicle_type" >
+                        <select class="form-control" name="vehicle_type" required>
                             <option value="car">Car</option>
                             <option value="motorbike">Motorbike</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="main_location" value="{{ $rider->main_location }}" >
+                        <input type="text" class="form-control" name="main_location" placeholder="Main Location" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="id" value="{{ $rider->id }}" hidden>
-                        <input type="submit" class="btn btn-primary btn-pill" value="Save changes">
+                      <input type="submit" class="btn btn-primary btn-pill" value="Sign up as rider">
                     </div>
 
                     @if (session('error'))
@@ -119,17 +118,27 @@
                     @if (session('success'))
                         <div class="alert alert-success" style="margin-top: 10px;width: 100%">{{ session('success') }}</div>
                     @endif
-
                   </form>
 
-                    <form action="/delete-rider" method="post" class="form-box" style="margin-top:10px">
-                        {{ csrf_field() }}
-                        <h3 class="h4 text-black mb-4">Delete Riders Profile</h3>
-                        <input type="text" name="id" value="{{ $rider->id }}" hidden>
-                        <input type="submit" class="btn btn-danger btn-pill" value="Delete rider">
-                    </form>
-
                 </div>
+
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                        <form action="/riders-check-rider" method="post" class="form-box">
+                          {{ csrf_field() }}
+                          <h3 class="h4 text-black mb-4">Log in as Riders</h3>
+                          <div class="form-group">
+                              <input type="text" class="form-control" name="phone_number" placeholder="Phone number" required>
+                          </div>
+                          <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                          </div>
+                         
+                          <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-pill" value="Log in as rider">
+                          </div>
+                        </form>
+      
+                      </div>
               </div>
             </div>
             
